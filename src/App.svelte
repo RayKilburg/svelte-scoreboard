@@ -7,14 +7,17 @@
     {
       name: "John Doe",
       points: 53,
+      type: "Erg",
     },
     {
       name: "Sam Smith",
       points: 45,
+      type: "Erg",
     },
     {
       name: "Sara Wilson",
       points: 34,
+      type: "Echo",
     },
   ];
 
@@ -38,6 +41,7 @@
       <Player
         name={player.name}
         points={player.points}
+        type={player.type}
         on:removeplayer={removePlayer}
       />
     {/each}

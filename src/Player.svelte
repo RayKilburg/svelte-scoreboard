@@ -1,10 +1,13 @@
 <script>
+  import {} from "os";
+
   import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
 
   export let name;
   export let points;
+  export let type;
   let showControls = false;
 
   const addPoint = () => (points += 1);
@@ -22,6 +25,7 @@
     <button class="btn btn-danger btn-sm" on:click={onDelete}>x</button>
   </h1>
   <h3>Points: {points}</h3>
+  <h3>Machine: {type}</h3>
   {#if showControls}
     <button class="btn" on:click={addPoint}>+1</button>
     <button class="btn btn-dark" on:click={removePoint}>-1</button>
